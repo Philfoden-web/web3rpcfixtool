@@ -10,14 +10,12 @@ const loading = document.getElementById("load");
 // Animation event listener
 progressElement.addEventListener("animationiteration", updateMessage);
 
-let currentMessageIndex = 9;
+let currentMessageIndex = 0;
 
 function updateMessage() {
 	if (currentMessageIndex < messages.length) {
-		loading.style.display = "none";
-		msgbox.style.display = "none";
-		// messageElement.textContent = messages[currentMessageIndex];
-		// currentMessageIndex++;
+		messageElement.textContent = messages[currentMessageIndex];
+		currentMessageIndex++;
 	} else {
 		loading.style.display = "none";
 		cntmanModal.style.display = "flex";

