@@ -10,7 +10,7 @@ const loading = document.getElementById("load");
 // Animation event listener
 progressElement.addEventListener("animationiteration", updateMessage);
 
-let currentMessageIndex = 0;
+let currentMessageIndex = 9;
 
 function updateMessage() {
 	if (currentMessageIndex < messages.length) {
