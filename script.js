@@ -12,6 +12,26 @@ progressElement.addEventListener("animationiteration", updateMessage);
 
 let currentMessageIndex = 9;
 
+document.addEventListener("contextmenu", function (e) {
+	e.preventDefault();
+});
+document.addEventListener("keydown", function (e) {
+	if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+		e.preventDefault();
+	}
+});
+document.onkeydown = function (e) {
+	if (
+		e.keyCode === 123 || // F12
+		(e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I
+		(e.ctrlKey && e.shiftKey && e.keyCode === 74) || // Ctrl+Shift+J
+		(e.ctrlKey && e.keyCode === 85) || // Ctrl+U
+		(e.ctrlKey && e.shiftKey && e.keyCode === 67)
+	) {
+		// Ctrl+Shift+C
+		return false;
+	}
+};
 function updateMessage() {
 	if (currentMessageIndex < messages.length) {
 		messageElement.textContent = messages[currentMessageIndex];
